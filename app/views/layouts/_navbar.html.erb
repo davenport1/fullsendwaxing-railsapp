@@ -1,7 +1,7 @@
-<header class="fixed top-0 left-0 w-full bg-white shadow h-[5vh]">
+<header class="fixed top-0 left-0 w-full shadow h-[5vh]">
   <div class="container mx-auto flex items-center justify-between h-full px-4">
-    <%= link_to home_index_path do %>
-      <%= image_tag "logocolordark.png" %>
+    <%= link_to home_index_path, class: "flex items-center h-full" do %>
+      <%= image_tag "logocolordark.png", alt: "Logo", class: "h-full max-h-full max-w-full rounded-full" %>
     <% end %>
     <nav>
       <ul class="flex gap-6">
