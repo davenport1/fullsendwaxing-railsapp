@@ -1,11 +1,103 @@
-<div>
-  <h1 class="font-bold text-4xl">Home#index</h1>
-  <p>Find me in app/views/home/index.html.erb</p>
+<!--<div>-->
+<!--  <h1 class="font-bold text-4xl">Home#index</h1>-->
+<!--  <p>Find me in app/views/home/index.html.erb</p>-->
 
-  <button data-tooltip-target="tooltip-default" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Default tooltip</button>
-  <div id="tooltip-default" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
-    Tooltip content
-    <div class="tooltip-arrow" data-popper-arrow></div>
-  </div>
+<!--  <button data-tooltip-target="tooltip-default" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Default tooltip</button>-->
+<!--  <div id="tooltip-default" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">-->
+<!--    Tooltip content-->
+<!--    <div class="tooltip-arrow" data-popper-arrow></div>-->
+<!--  </div>-->
 
-</div>
+<!--</div>-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <%= javascript_importmap_tags %>
+  <title>Home</title>
+</head>
+  <body class="m-0 p-0">
+    <div class="min-h-screen flex flex-col items-center justify-center bg-cover bg-bottom w-full" style="background-image: url('<%= asset_path('farshotbest.jpg') %>');">
+      <%= render "layouts/navbar" %>
+      <div class="rounded-full w-80 h-80 mt-20 md:h-96 md:w-96">
+        <%= image_tag 'logolight.png', alt: 'Main splash image', class: 'rounded-full' %>
+      </div>
+      <div class="flex flex-col justify-center items-center mt-10">
+        <div class="text-5xl flex justify-center gap-16 py-3 text-white">
+          <a href="https://instagram.com/fullsendwaxing?igshid=YmMyMTA2M2Y=" target="_blank">
+            <i class="fa fa-instagram h-10 w-10 text-white hover:scale-125"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div>
+      <h2 class="text-4xl font-bold mb-8">we're all about the ride.</h2>
+      <p class="text-lg m-2 md:m-16 lg:m-32 xl:m-64">
+        We're on a mission to redefine your snowboarding and skiing experience,
+        blending expertise with a laid-back vibe.
+        Our custom waxing and repair services not only elevate your gear's performance but also pay homage to our mountain havens.
+      </p>
+    </div>
+    <div>
+      <div class="mb-8 md:ml-8 md:mr-4">
+        <p class="text-lg">
+          Our story kicks off with a heartfelt love for snow sports and a profound respect for the mountain landscapes.
+          We've finely tuned our skills to become your ultimate choice for snowboard and ski maintenance.
+          Our commitment to excellence fuels our attention to the nitty-gritty, tailored to your unique style.
+        </p>
+      </div>
+      <div class="mb-8 md:ml-8 md:mr-4">
+        <p class="text-lg">
+          Plus, we're eco-warriors at heart, rocking biodegradable waxes to keep our mountain playgrounds as fresh as the powder you love.
+          And guess what? We've got your back, offering pickup and delivery right to your doorstep, wherever you're hanging out.
+          Join us in safeguarding the mountains we cherish while experiencing the very best of snowboarding and skiing.
+        </p>
+      </div>
+    </div>
+    <div>
+      <h2 class="text-4xl font-bold mb-8">tuning services.</h2>
+      <p class="text-lg mb-8 mx-4 md:mx-16">
+        We're all about delivering next-level expertise with a commitment to eco-friendliness.
+        Our convenient pick-up and delivery service brings top-notch gear and service right to your doorstep, wherever you are.
+        Join us in supporting snow sports excellence and preserving the beauty of our beloved mountains.
+        Let's ride, and make the mountain experience yours, no matter where you call home!
+      </p>
+      <h2 class="text-4xl font-bold mb-8">ski and board repairs.</h2>
+      <div>
+        <p class="text-lg mb-12 mx-8">
+          🔧 Ptex Repairs: Say goodbye to those unsightly base gouges and scratches.
+          Our meticulous Ptex repairs seamlessly blend with your equipment, ensuring smooth, uninterrupted glides down the slopes.
+        </p>
+      </div>
+      <div>
+        <p class="text-lg mb-12 mx-8">
+          🔪 Edge Repairs: Cracked or damaged edges can spell trouble on the mountain.
+          Let us restore your edges to their former glory, providing you with precision control and confidence on every turn.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
+
+
+<!--    <div class="text-center p-10 py-10">-->
+<!--      <p class="text-md py-5 leading-8 text-white max-w-xl mx-auto md:text-xl">-->
+<!--      </p>-->
+<!--      <div class="text-5xl flex justify-center gap-16 py-3 text-white">-->
+<!--        <a href="https://instagram.com/fullsendwaxing?igshid=YmMyMTA2M2Y=" target="_blank">-->
+<!--          <i class="fa fa-instagram h-10 w-10 text-white hover:scale-125"></i>-->
+<!--        </a>-->
+<!--        <a href="https://www.facebook.com/fullsendwaxing/" target="_blank">-->
+<!--          <i class="fa fa-facebook h-10 w-10 text-white hover:scale-125"></i>-->
+<!--        </a>-->
+<!--        <a href="https://vm.tiktok.com/ZTdCK6Uqn/" target="_blank">-->
+<!--          <i class="fa fa-tiktok h-10 w-10 text-white hover:scale-125"></i>-->
+<!--        </a>-->
+<!--        <a href="https://venmo.com/code?user_id=1964786585698304640&created=1700151778.773841&printed=1" target="_blank">-->
+<!--          <i class="iconify w-20 text-white hover:scale-125" data-icon="simple-icons:venmo"></i>-->
+<!--        </a>-->
+<!--      </div>-->
+<!--    </div>-->
