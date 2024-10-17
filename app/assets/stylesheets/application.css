@@ -9,15 +9,19 @@
  * Consider organizing styles into separate files for maintainability.
  */
 .page {
-    background-color: #171717;
+    background-color: #f2e3c7;
 }
 
 .layout {
-    background-color: #261B23;
+    background-color: #f2e3c7;
     max-width: 68.75rem;
     width: 90%;
     margin-left: auto;
     margin-right: auto;
+}
+
+.nav-bar {
+    background-color: #f2e3c7;
 }
 
 .h0 {
@@ -47,4 +51,53 @@ h4,
 body,
 .p {
     @apply font-primary text-sm md:text-base;
+}
+
+/* Card container that spans the width of the page */
+.card {
+    width: 100%;
+    padding: 20px 0; /* Padding for spacing */
+    box-sizing: border-box;
+
+}
+
+/* Inner content with max-width */
+.card-content {
+    max-width: 1100px;
+    margin: 0 auto; /* Center align the content */
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 8px;
+}
+
+/* Style for alternating background colors */
+.section:nth-child(odd) .card {
+    background-color: #f0f0f0;
+    box-shadow: 0 4px 8px rgba(0.1, 0.1, 0, 0.1);
+}
+
+.section:nth-child(even) .card {
+
+}
+
+/* Additional styles to ensure proper spacing and layout */
+h2 {
+    margin-top: 0;
+    font-family: 'Montserrat', sans-serif; /* Heading font */
+    font-weight: 700; /* Bold headings */
+    font-size: 4rem;
+}
+
+p {
+    margin-bottom: 0;
+    font-family: 'Montserrat', sans-serif; /* Body font */
+}
+
+/* Additional styles to enhance visual appeal */
+a {
+    font-family: 'Montserrat', sans-serif; /* Link font */
+}
+
+button {
+    font-family: 'Montserrat', sans-serif; /* Button font */
 }
