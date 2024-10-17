@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+    .text-heading {
+        @apply text-4xl text-gray-200 font-bold mb-8;
+    }
+
+    .text-paragraph {
+        @apply text-lg text-gray-200 m-2 md:m-16 lg:m-32 xl:m-64;
+    }
+}
+
 /*
 
 @layer components {

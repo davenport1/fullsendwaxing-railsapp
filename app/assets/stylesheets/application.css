@@ -8,8 +8,12 @@
  *
  * Consider organizing styles into separate files for maintainability.
  */
+.page {
+    background-color: #171717;
+}
 
 .layout {
+    background-color: #261B23;
     max-width: 68.75rem;
     width: 90%;
     margin-left: auto;
