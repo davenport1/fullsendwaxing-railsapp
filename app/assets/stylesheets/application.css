@@ -70,6 +70,38 @@ body,
     border-radius: 8px;
 }
 
+/* Image container using flexbox for side-by-side layout */
+.image-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px; /* Small gap between images */
+}
+
+/* Style all images to have the same size */
+.card-image {
+    width: 100%;
+    max-width: 30%; /* Make images take up 30% of the container */
+    height: auto;
+    object-fit: cover; /* Ensures images fill the area without distortion */
+    border-radius: 8px;
+}
+
+/* On smaller screens (mobile) only show the first image */
+@media (max-width: 768px) {
+    .image-container {
+        flex-direction: column; /* Stack images vertically on mobile */
+    }
+
+    .card-image:nth-child(n+2) {
+        display: none; /* Hide the second and third images */
+    }
+
+    .card-image {
+        max-width: 100%; /* Ensure the first image takes up full width */
+    }
+}
+
 /* Style for alternating background colors */
 .section:nth-child(odd) .card {
     background-color: #f0f0f0;
