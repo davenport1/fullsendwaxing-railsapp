@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  post "contact", to: "home#send_contact"
   get "home/index"
   get "home/about"
   get "home/contact"

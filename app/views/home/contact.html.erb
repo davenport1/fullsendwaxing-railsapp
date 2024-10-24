@@ -1,4 +1,58 @@
-<div>
-  <h1 class="font-bold text-4xl">Home#contact</h1>
-  <p>Find me in app/views/home/contact.html.erb</p>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <%= javascript_importmap_tags %>
+  <title>Contact Us</title>
+</head>
+<body class="flex flex-col min-h-screen justify-between">
+<main class="flex-grow">
+  <div class="section">
+    <div class="card">
+      <div class="card-content">
+        <h2 class="font-semibold mt-14 mb-4">Contact Us</h2>
+        <%= form_with url: contact_path, local: true, html: { class: 'w-full max-w-lg' } do |form| %>
+          <div class="mb-4">
+            <%= form.label :name, "Name", class: "block text-gray-700 text-sm font-bold mb-2" %>
+            <%= form.text_field :name, class: "appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" %>
+          </div>
+          <div class="mb-4">
+            <%= form.label :email, "Email", class: "block text-gray-700 text-sm font-bold mb-2" %>
+            <%= form.email_field :email, class: "appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" %>
+          </div>
+          <div class="mb-4">
+            <%= form.label :message, "Message", class: "block text-gray-700 text-sm font-bold mb-2" %>
+            <%= form.text_area :message, rows: 5, class: "appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" %>
+          </div>
+          <div class="flex items-center justify-between">
+            <%= form.submit "Send", class: "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</main>
+<footer class="bg-gray-800 text-white py-6">
+  <div class="container mx-auto px-4">
+    <div class="flex flex-col md:flex-row justify-between items-center">
+      <div class="mb-4 md:mb-0">
+        <h2 class="text-lg font-semibold">Contact Us</h2>
+        <p>Email: <a href="mailto:info@yourcompany.com" class="text-blue-400 hover:underline">info@yourcompany.com</a></p>
+        <p>Phone: <a href="tel:+1234567890" class="text-blue-400 hover:underline">(123) 456-7890</a></p>
+      </div>
+      <div class="mb-4 md:mb-0">
+        <h2 class="text-lg font-semibold">Location</h2>
+        <p>City of Operation: <span class="text-blue-400">San Jose, California</span></p>
+      </div>
+    </div>
+    <div class="text-center mt-4">
+      <p>&copy; <span id="year"></span> Full Send Waxing. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+<script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

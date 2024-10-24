@@ -1,0 +1,16 @@
+<!-- app/views/contact_mailer/contact_email.html.erb -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>New Contact Us Message</title>
+</head>
+<body>
+<h1>Hello,</h1>
+<p>You have received a new message from <%= @name %>.</p>
+<p>Message:</p>
+<p><%= @message %></p>
+<p>Reply to: <%= @reply_to %></p>
+</body>
+</html>
