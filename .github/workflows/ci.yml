@@ -78,6 +78,19 @@ jobs:
           ruby-version: .ruby-version
           bundler-cache: true
 
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+
+      - name: Install dependencies
+        run: |
+          npm install
+          bundle install
+
+      - name: Build Tailwind CSS
+        run: npm run build:css
+
       - name: Set execute permission for rails
         run: chmod +x bin/rails
 
