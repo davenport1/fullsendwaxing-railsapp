@@ -18,6 +18,9 @@ servers:
 proxy:
   ssl: true
   host: app.example.com
+  ports:
+    - 80:3000 # Map host port 80 to container port 3000
+    - 443:3000 # Map host port 443 to container port 3000
 
 # Credentials for your image host.
 registry:
