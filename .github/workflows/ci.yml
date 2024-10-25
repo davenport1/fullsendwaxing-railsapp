@@ -89,7 +89,7 @@ jobs:
           bundle install
 
       - name: Build Tailwind CSS
-        run: npm run build:css
+        run: bin/rails tailwindcss:build
 
       - name: Set execute permission for rails
         run: chmod +x bin/rails
