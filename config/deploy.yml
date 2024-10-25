@@ -1,13 +1,13 @@
 # Name of your application. Used to uniquely configure containers.
-service: fullsendwaxing_railsapp
+service: fullsendwaxing
 
 # Name of the container image.
-image: your-user/fullsendwaxing_railsapp
+image: davenmport/fullsendwaxing
 
 # Deploy to these servers.
 servers:
   web:
-    - 192.168.0.1
+    - 149.28.11.7
   # job:
   #   hosts:
   #     - 192.168.0.1
@@ -23,7 +23,7 @@ proxy:
 registry:
   # Specify the registry server, if you're not using Docker Hub
   # server: registry.digitalocean.com / ghcr.io / ...
-  username: your-user
+  username: davenmport
 
   # Always use an access token rather than real password when possible.
   password:
@@ -85,8 +85,8 @@ builder:
   #   - RAILS_MASTER_KEY
 
 # Use a different ssh user than root
-# ssh:
-#   user: app
+#ssh:
+#  user: deploy
 
 # Use accessory services (secrets come from .kamal/secrets).
 # accessories:
