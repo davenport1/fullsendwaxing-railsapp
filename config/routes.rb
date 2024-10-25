@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resource :session
+  resources :passwords, param: :token
   post "contact", to: "home#send_contact"
   get "home/index"
   get "home/about"
@@ -16,6 +18,11 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root "home#index"
+
+  get "registration/new"
+  get "registration/create"
+  get "signup", to: "registration#new"
+  post "signup", to: "registration#create"
 
   resources :articles do
     resources :comments
