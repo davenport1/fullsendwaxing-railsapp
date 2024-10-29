@@ -6,6 +6,7 @@ class RegistrationController < ApplicationController
 
   def create
     @user = User.new(user_params)
+    @user.admin = false
 
     unless @user.save
       start_new_session_for(@user)
@@ -17,6 +18,6 @@ class RegistrationController < ApplicationController
   end
 
   def user_params
-    params.expect(user: [ :email_address, :password, :password_confirmation ])
+    params.expect(user: [ :email_address, :password, :password_confirmation, :first_name, :last_name ])
   end
 end

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get "admin/home"
   resource :session
   resources :passwords, param: :token
   post "contact", to: "home#send_contact"
