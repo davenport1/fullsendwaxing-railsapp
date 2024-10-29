@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/ruby/mutex_m.git
+  revision: 86ee14345740636a909b54f089f7eb0d51ea134f
+  specs:
+    mutex_m (0.2.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -410,6 +416,7 @@ DEPENDENCIES
   jbuilder
   kamal (>= 2.0.0.rc2)
   mini_magick
+  mutex_m!
   propshaft
   puma (>= 5.0)
   rails (~> 8.0.0.beta1)
