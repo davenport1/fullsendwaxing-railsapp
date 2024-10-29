@@ -60,14 +60,15 @@ Rails.application.configure do
 
   # Set host to be used by links generated in mailer templates.
   config.action_mailer.default_url_options = { host: "fullsendwaxing.com" }
-
+  config.action_mailer.delivery_method = :smtp
   # Specify outgoing SMTP server. Remember to add smtp/* credentials via rails credentials:edit.
   config.action_mailer.smtp_settings = {
-    user_name: Rails.application.credentials.dig(:smtp, :user_name),
-    password: Rails.application.credentials.dig(:smtp, :password),
-    address: "sandbox.smtp.mailtrap.io",
-    port: 587,
-    authentication: :plain
+    user_name: Rails.application.credentials.dig(:smtp-prod, :user_name),
+    password: Rails.application.credentials.dig(:smtp-prod, :password),
+    address: "live.smtp.mailtrap.io",
+    host: "live.smtp.mailtrap.io",
+    port: "587",
+    authentication: :login
   }
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
