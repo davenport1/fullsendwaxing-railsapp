@@ -7,7 +7,7 @@ image: davenmport/fullsendwaxing
 # Deploy to these servers.
 servers:
   web:
-    - 149.28.11.7
+    - 149.28.11.7:3000
   # job:
   #   hosts:
   #     - 192.168.0.1
