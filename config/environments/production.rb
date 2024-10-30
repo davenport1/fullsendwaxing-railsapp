@@ -56,7 +56,8 @@ Rails.application.configure do
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
-  # config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.default_url_options = { host: "fullsendwaxing.com" }
 
   # Set host to be used by links generated in mailer templates.
   config.action_mailer.delivery_method = :smtp
@@ -85,7 +86,6 @@ Rails.application.configure do
   config.hosts << "www.fullsendwaxing.com"
   config.hosts << "fullsendwaxing.com"
 
-  config.action_mailer.default_url_options = { host: "fullsendwaxing.com" }
   # config.hosts = [
   #   "example.com",     # Allow requests from example.com
   #   /.*\.example\.com/ # Allow requests from subdomains like `www.example.com`
