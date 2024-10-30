@@ -59,12 +59,12 @@ Rails.application.configure do
   # config.action_mailer.raise_delivery_errors = false
 
   # Set host to be used by links generated in mailer templates.
-  config.action_mailer.default_url_options = { host: "fullsendwaxing.com" }
+  config.action_mailer.default_url_options = { host: "localhost", port: 3000 }
   config.action_mailer.delivery_method = :smtp
   # Specify outgoing SMTP server. Remember to add smtp/* credentials via rails credentials:edit.
   config.action_mailer.smtp_settings = {
-    user_name: Rails.application.credentials.dig(:"smtp-prod", :user_name),
-    password: Rails.application.credentials.dig(:"smtp-prod", :password),
+    user_name: Rails.application.credentials.dig(:smtp, :user_name),
+    password: Rails.application.credentials.dig(:smtp, :password),
     address: "smtp.mailgun.org",
     port: 25,
     authentication: :plain
