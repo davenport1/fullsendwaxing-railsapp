@@ -7,7 +7,7 @@ image: davenmport/fullsendwaxing
 # Deploy to these servers.
 servers:
   web:
-    - 149.28.11.7:3000
+    - fullsendwaxing.com
   # job:
   #   hosts:
   #     - 192.168.0.1
@@ -15,7 +15,9 @@ servers:
 
 # Enable SSL auto certification via Let's Encrypt (and allow for multiple apps on one server).
 # Set ssl: false if using something like Cloudflare to terminate SSL (but keep host!).
-proxy: false
+proxy:
+  ssl: true
+  host: fullsendwaxing.com
 
 # Credentials for your image host.
 registry:

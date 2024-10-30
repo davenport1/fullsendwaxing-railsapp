@@ -65,10 +65,9 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
     user_name: Rails.application.credentials.dig(:"smtp-prod", :user_name),
     password: Rails.application.credentials.dig(:"smtp-prod", :password),
-    address: "live.smtp.mailtrap.io",
-    host: "live.smtp.mailtrap.io",
-    port: "587",
-    authentication: :login
+    address: "smtp.mailgun.org",
+    port: 25,
+    authentication: :plain
   }
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to

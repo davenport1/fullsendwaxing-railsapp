@@ -46,10 +46,12 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
     user_name: Rails.application.credentials.dig(:smtp, :user_name),
     password: Rails.application.credentials.dig(:smtp, :password),
-    address: "sandbox.smtp.mailtrap.io",
-    port: 587,
+    address: "smtp.mailgun.org",
+    port: 25,
     authentication: :plain
   }
+
+  config.action_mailer.raise_delivery_errors = true
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
