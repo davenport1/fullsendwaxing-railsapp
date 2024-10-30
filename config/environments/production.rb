@@ -84,6 +84,8 @@ Rails.application.configure do
   config.active_storage.track_variants = true
 
   # Enable DNS rebinding protection and other `Host` header attacks.
+  config.hosts << "www.fullsendwaxing.com"
+  config.hosts << "fullsendwaxing.com"
   # config.hosts = [
   #   "example.com",     # Allow requests from example.com
   #   /.*\.example\.com/ # Allow requests from subdomains like `www.example.com`
