@@ -46,8 +46,8 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
     user_name: Rails.application.credentials.dig(:smtp, :user_name),
     password: Rails.application.credentials.dig(:smtp, :password),
-    address: "sandbox.smtp.mailtrap.io",
-    port: 587,
+    address: "smtp.mailgun.org",
+    port: 25,
     authentication: :plain
   }
 
