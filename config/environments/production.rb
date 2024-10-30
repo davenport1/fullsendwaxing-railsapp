@@ -66,7 +66,7 @@ Rails.application.configure do
     user_name: Rails.application.credentials.dig(:smtp, :user_name),
     password: Rails.application.credentials.dig(:smtp, :password),
     address: "smtp.mailgun.org",
-    port: 25,
+    port: 587,
     authentication: :plain
   }
 
