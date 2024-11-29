@@ -47,11 +47,9 @@ Rails.application.configure do
     user_name: Rails.application.credentials.dig(:smtp, :user_name),
     password: Rails.application.credentials.dig(:smtp, :password),
     address: "smtp.mailgun.org",
-    port: 25,
+    port: 587,
     authentication: :plain
   }
-
-  config.action_mailer.raise_delivery_errors = true
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
