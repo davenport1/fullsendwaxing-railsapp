@@ -1,5 +1,6 @@
 class HomeController < ApplicationController
   allow_unauthenticated_access
+  ivisible_captcha only: [ :send_contact ], honeypot: :subtitle
   def index
   end
 
