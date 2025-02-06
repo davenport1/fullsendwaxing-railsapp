@@ -21,6 +21,5 @@ module.exports = {
     require('@tailwindcss/container-queries'),
     require('tailwindcss'),
     require('autoprefixer'),
-    require('flowbite/plugin'),
   ]
 }
