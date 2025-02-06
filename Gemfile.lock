@@ -104,7 +104,7 @@ GEM
     debug (1.10.0)
       irb (~> 1.10)
       reline (>= 0.3.8)
-    dockerfile-rails (1.6.25)
+    dockerfile-rails (1.7.6)
       rails (>= 3.0.0)
     dotenv (3.1.7)
     dotenv-rails (3.1.7)
@@ -179,7 +179,7 @@ GEM
     mini_portile2 (2.8.8)
     minitest (5.25.4)
     msgpack (1.7.5)
-    net-imap (0.5.2)
+    net-imap (0.5.5)
       date
       net-protocol
     net-pop (0.1.2)
@@ -190,7 +190,7 @@ GEM
       net-ssh (>= 2.6.5, < 8.0.0)
     net-sftp (4.0.0)
       net-ssh (>= 5.0.0, < 8.0.0)
-    net-smtp (0.5.0)
+    net-smtp (0.5.1)
       net-protocol
     net-ssh (7.3.0)
     nio4r (2.7.4)
