@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/webfonts/fa-solid-900.woff2" integrity="sha384-8wpFSeG96RWpXrSAdg20khaPJMw1UrHg35z5j1F5hgPap7Gb7N6d6xQEZaq7F+4y" crossorigin="anonymous">
     <%# Includes all stylesheet files in app/views/stylesheets %>
     <%= stylesheet_link_tag "application.css", "data-turbo-track": "reload" %>
-    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+
     <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
@@ -32,8 +32,7 @@
   <body class="page flex flex-col min-h-screen justify-between">
   <%= render 'layouts/flash' %>
     <%= render "layouts/navbar" %>
-<!--    <main class="container mx-auto mt-28 px-5 flex">-->
-    <main>
+    <main class="mt-10">
       <%= yield %>
     </main>
   <footer class="bg-gray-800 text-white py-6">
