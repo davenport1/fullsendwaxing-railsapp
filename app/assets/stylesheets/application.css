@@ -24,7 +24,7 @@
     background-color: #f2e3c7;
 }
 
-.h0 {
+/* .h0 {
     @apply font-primary text-3xl font-bold md:text-5xl;
 }
 
@@ -51,7 +51,7 @@ h4,
 body,
 .p {
     @apply font-primary text-sm md:text-base;
-}
+} */
 
 /* Card container that spans the width of the page */
 .card {

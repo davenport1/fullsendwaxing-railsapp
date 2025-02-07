@@ -7,7 +7,7 @@
   <title>Contact Us</title>
 </head>
 <body class="flex flex-col min-h-screen justify-between">
-<main class="flex-grow">
+<main class="grow">
   <div class="section">
     <div class="card">
       <div class="card-content">
@@ -16,18 +16,18 @@
           <%= form.invisible_captcha :subtitle %>
           <div class="mb-4">
             <%= form.label :name, "Name", class: "block text-gray-700 text-sm font-bold mb-2" %>
-            <%= form.text_field :name, class: "appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" %>
+            <%= form.text_field :name, class: "appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded-sm py-3 px-4 leading-tight focus:outline-hidden focus:bg-white focus:border-gray-500" %>
           </div>
           <div class="mb-4">
             <%= form.label :email, "Email", class: "block text-gray-700 text-sm font-bold mb-2" %>
-            <%= form.email_field :email, class: "appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" %>
+            <%= form.email_field :email, class: "appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded-sm py-3 px-4 leading-tight focus:outline-hidden focus:bg-white focus:border-gray-500" %>
           </div>
           <div class="mb-4">
             <%= form.label :message, "Message", class: "block text-gray-700 text-sm font-bold mb-2" %>
-            <%= form.text_area :message, rows: 5, class: "appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" %>
+            <%= form.text_area :message, rows: 5, class: "appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded-sm py-3 px-4 leading-tight focus:outline-hidden focus:bg-white focus:border-gray-500" %>
           </div>
           <div class="flex items-center justify-between">
-            <%= form.submit "Send", class: "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" %>
+            <%= form.submit "Send", class: "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-sm focus:outline-hidden focus:shadow-outline" %>
           </div>
         <% end %>
       </div>
