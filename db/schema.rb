@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2024_10_26_235921) do
+ActiveRecord::Schema[8.0].define(version: 2024_12_25_161353) do
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
@@ -44,7 +44,19 @@ ActiveRecord::Schema[8.0].define(version: 2024_10_26_235921) do
     t.text "body"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "status"
+    t.string "status", default: "public"
+  end
+
+  create_table "carousel_images", force: :cascade do |t|
+    t.string "section", null: false
+    t.string "title"
+    t.text "description"
+    t.integer "display_order", null: false
+    t.boolean "active", default: true
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["display_order"], name: "index_carousel_images_on_display_order"
+    t.index ["section"], name: "index_carousel_images_on_section"
   end
 
   create_table "comments", force: :cascade do |t|
@@ -53,7 +65,7 @@ ActiveRecord::Schema[8.0].define(version: 2024_10_26_235921) do
     t.integer "article_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "status"
+    t.string "status", default: "public"
     t.index ["article_id"], name: "index_comments_on_article_id"
   end
 

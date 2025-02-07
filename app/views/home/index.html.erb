@@ -39,17 +39,10 @@
         </p>
       </div>
       <div class="card-content">
-        <div class="flex flex-row justify-between gap-2">
-          <div class="hidden md:block w-1/3">
-            <%= image_tag 'dylan-thielsen.JPG', alt: 'Dylan Stegman split-boarding on Mt Thielsen in Central Oregon', class: "w-full object-cover rounded-lg" %>
-          </div>
-          <div class="w-full md:w-1/3">
-            <%= image_tag 'alec-lassen.JPG', alt: 'owner splitboarding in Lassen Volcanic National Park', class: "w-full object-cover rounded-lg" %>
-          </div>
-          <div class="hidden md:block w-1/3">
-            <%= image_tag 'nh-thielsen.JPG', alt: 'Matthew Davenport split-boarding on Mt Thielsen in Central Oregon', class: "w-full object-cover rounded-lg" %>
-          </div>
-        </div>
+        <%= render 'shared/image_carousel', 
+          images: carousel_images_for('index-1'), 
+          mobile_only: false %>
+      </div>
       </div>
     </div>
   </div>

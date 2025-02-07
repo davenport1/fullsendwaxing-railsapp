@@ -1,0 +1,14 @@
+<div class="carousel-container" data-controller="carousel">
+  <div class="flex flex-row justify-between gap-2">
+    <% images.each_with_index do |carousel_image, index| %>
+      <div class="<%= mobile_only ? 'w-full' : (index == 1 ? 'w-full md:w-1/3' : 'hidden md:block w-1/3') %>">
+        <%= image_tag carousel_image.image, 
+          alt: carousel_image.title, 
+          class: "w-full object-cover rounded-lg",
+          data: { 
+            description: carousel_image.description 
+          } %>
+      </div>
+    <% end %>
+  </div>
+</div>

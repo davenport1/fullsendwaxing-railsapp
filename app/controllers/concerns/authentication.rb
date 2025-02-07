@@ -23,7 +23,9 @@ module Authentication
 
 
     def resume_session
-      Current.session ||= find_session_by_cookie
+      if Current.session ||= find_session_by_cookie
+        Current.user ||= Current.session.user
+      end
     end
 
     def find_session_by_cookie
@@ -56,8 +58,9 @@ module Authentication
   end
 
   def require_admin
+    Rails.logger.debug "Current.user: #{Current.user.inspect}"
     unless admin?
-      redirect_to root_path, alert: "You are not authorized to access this page"
+      redirect_to new_session_path, alert: "You are not authorized to access this page"
     end
   end
 end
